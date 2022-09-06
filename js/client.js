@@ -1,10 +1,18 @@
 //CLIENT SIDE
+// const hostname='127.0.0.1'||process.env.HOST||'0.0.0.0';
+// const port=8000||process.env.PORT;
+// const process=require('process');
+// const port=8000||process.env.PORT||process.env.YOUR_PORT;
+// const myhost=process.env.YOUR_HOST||process.env.HOST||'0.0.0.0';
+// const link=`${myhost}:${port}`;
+// console.log(link);
 const socket=io('http://localhost:8000',{transports:['websocket']});
 
 const form=document.getElementById('sendcontainer');
 const messageinp=document.getElementById('msginp');
 const msgcontainer=document.querySelector(".container");
-const msgname=document.querySelector('.username')
+const msgname=document.createElement('div')
+msgname.classList.add('username')
 let time=document.querySelector('.time');
 var audio=new Audio('iphine.mp3');
 var audio2=new Audio('weeee.mp3');
@@ -53,14 +61,14 @@ const append=(user,message,position)=>{
         let now,mesgval;
         timeelement.setAttribute('id','time');
         element.classList.add('username');
-        element.innerText=user;//jo bhi div ke andar text rhega vo bhej do
+        element.innerHTML=user;//jo bhi div ke andar text rhega vo bhej do
         content.textContent=message;
         now=updatetime();
-        timeelement.innerText=`${now}`;
+        timeelement.innerHTML=`${now}`;
         document.getElementById('time').innerHTML=now;
     }
     else{
-        content.innerText=user+' '+message;
+        content.innerHTML=user+' '+message;
     }    
     document.getElementsByClassName("mesg")[0].insertBefore(msgname,time);    
     contentdiv.appendChild(content);                    

@@ -1,5 +1,8 @@
 // THIS IS A NODE SERVER WHOCH WILL HANDLE SOCKET IO CONNECTIONS
-const io=require('socket.io')(8000)//port no
+// let port=(process.env.PORT || 8000);
+const port=8000||process.env.PORT;
+const myhost=process.env.HOST||'127.0.0.1'||'0.0.0.0';
+const io=require('socket.io')(port)//port no
 // const cors=require('cors');
 // io.use(cors());
 
@@ -21,3 +24,20 @@ io.on('connection',socket=>{
         delete users[socket.id]
     });
 });
+
+//express part
+var express=require('express');
+const app=express();
+const http=require('http');
+const server=http.Server(app);
+app.get('/',function(req,res){
+    res.sendFile('index.html');
+})
+server.listen(port,myhost,()=>{
+    console.log(`listening on https://${myhost}:${port}/`);
+})
+// var server_port = process.env.port || process.env.PORT;
+// var server_host = process.env.myhost || '0.0.0.0';
+// server.listen(server_port, server_host, function() {
+//     console.log('Listening on port %d', server_port);
+// });

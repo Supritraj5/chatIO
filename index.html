@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatIO</title>
-    <script defer src="http://localhost:8000/socket.io/socket.io.js "></script><!-- to link server with client  -->
+    <!-- <script defer src="/socket.io/socket.io.js "></script>to link server with client  -->
+    <script defer src="/socket.io/socket.io.js "></script>
     <script defer src="js/client.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 400px)" href="css/style400.css">
@@ -14,17 +15,17 @@
 <body>
     <nav>
         <img class="logo" src="chat.png" alt="err in logo">
-        <h1>Welcome to Chatio app</h1>
+        <h1>Welcome to ChatIO app</h1>
     </nav>
     <div class="container">
-        <div class="mesg right">
-            <div class="username">You</div>
-            hi bro
-            <span id="time">08:23am</span>
-        </div>
-        <div class="mesg middle">bot joined the chat</div>
-        <div class="mesg left"><div class="username">Bot</div>ha bhai bol </div>
-        <div class="mesg right"><div class="username">You</div>kya haal bhai</div>
+        <div class="mesg middle">All the chats in this app are not saved so there is no security issues ;)happy chatting</div>
+        <div class="mesg right"><div class="username">chatIO bot</div><p>You can start chatting</p><span id="time"></span></div>
+        <!-- <div class="mesg left"><div class="username">chatIO bot2</div><p>pucha kisine</p><span id="time"></span></div> -->
+        <!-- <div class="mesg right">
+            <div class="username"></div>
+            <span id="time"></span>
+        </div> -->
+        <!-- <div class="mesg right"><div class="username"></div></div> -->
     </div>
     <div id="sendcontainer">
         <form action="#" autocomplete="off">
