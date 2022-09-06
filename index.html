@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatIO</title>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js "></script><!-- to link server with client  -->
+    <script defer src="js/client.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 400px)" href="css/style400.css">
+    <link rel="stylesheet" media="screen and (max-width: 351px)" href="css/style351.css">
+</head>
+<body>
+    <nav>
+        <img class="logo" src="chat.png" alt="err in logo">
+        <h1>Welcome to Chatio app</h1>
+    </nav>
+    <div class="container">
+        <div class="mesg right">
+            <div class="username">You</div>
+            hi bro
+            <span id="time">08:23am</span>
+        </div>
+        <div class="mesg middle">bot joined the chat</div>
+        <div class="mesg left"><div class="username">Bot</div>ha bhai bol </div>
+        <div class="mesg right"><div class="username">You</div>kya haal bhai</div>
+    </div>
+    <div id="sendcontainer">
+        <form action="#" autocomplete="off">
+            <input type="text" id="msginp" name="msginp" placeholder="Enter your message here">
+            <button class="btn" type="submit"><img src="send.png" alt="err in btn pic"></button>
+        </form>
+    </div>
+</body>
+</html>

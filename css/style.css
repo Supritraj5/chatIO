@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    display: block;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+}
+h1{
+    margin: 12px;
+    font-size: 30px;
+    font-family: cursive;
+    text-align: center;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgb(145, 243, 158),wheat);
+}
+.container{
+    max-width: 900px;
+    margin: 5px auto;
+    background-color: lemonchiffon;
+    height: 65vh;
+    padding: 30px;
+    overflow-y: auto;
+    border-radius: 10px;
+
+    background: url('../chatbg2.jpg') no-repeat center center/cover;
+    z-index: -1;
+    height: 67%;
+    width: 67%;
+    /* in above add scroll if you want a scroll bar and add auto to get scroll bar when needed */
+
+    /* **for flex (not accomplished)** */
+    /* justify-content: space-between; */
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+.mesg{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 25%;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    height: 1.5rem;
+}
+.left{
+    width: auto;
+    min-width: 150px;
+    max-width: 590px;
+    float: left;
+    clear: both;
+    height: max-content;
+    padding: 2px 5px;
+
+    color: black;
+    background-image: linear-gradient(rgb(230 233 243),rgb(165 198 233));
+    /* **for flex (not accomplished)** */
+    /* align-self: flex-start;
+    margin-left: calc(75%); */
+}
+.right .username{
+    color: rgb(235 219 27);
+}
+.middle{
+    clear: both;
+    margin:10px auto;
+    background-color: #e3e394;
+    border: 1px solid #c1c1c1;
+    color: darkslategrey;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    width: max-content;
+}
+.right{
+    float: right;
+    clear: both;
+    height: max-content;
+    padding: 2px 5px;
+    width: auto;
+    min-width: 150px;
+    max-width: 590px;
+
+    /* background-color: #e8e8f1; */
+    color: white;
+    background-image: linear-gradient(rgb(10 62 255),rgb(217 82 233));
+    /* **for flex (not accomplished)** */
+    /* align-self: flex-end; */
+    /* margin-right: calc(75%); */
+}
+.left .username{
+    color: #3e34d7;
+}
+#sendcontainer{
+    display: block;
+    margin: 2px auto;
+    text-align: center;
+}
+#sendcontainer input{
+    width: 63%;
+    border: 2px solid green;
+    margin: auto 5px;
+    padding: 3px 5px;
+    border-radius: 14px;
+    font-size: 16px;
+    outline: none;
+}
+#sendcontainer .btn{
+    border: 4px solid green;
+    background-color: green;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: absolute;
+}
+#sendcontainer .btn img{
+    width: 19px;
+    height: 19px;
+    justify-content: center;
+    align-items: center;
+} 
+.username{
+    order: 1;
+    display: block;
+    margin: 5px 0px;
+    width: max-content;
+    height: max-content;
+    color: rgb(99, 153, 17);
+    font-weight: bold;
+}
+.mesg span {
+    order: 3;
+    display: block;
+    color: black;
+    font-size: 15px;
+    margin: 2px;
+    position: relative;
+    text-align: end
+}
+.mesg p{
+    order: 2;
+}
